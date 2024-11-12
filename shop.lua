@@ -81,7 +81,7 @@ function BuyLibrary:Init(parent)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		BackgroundColor3 = Color3.fromRGB(26, 26, 26),
 		BorderSizePixel = 0,
-		Size = UDim2.new(0, 200, 0, 32),
+		Size = UDim2.new(1, -60, 0, 32),
 		Name = "SearchInput",
 		Parent = ShopUI.Search.Main,
 	}, {
