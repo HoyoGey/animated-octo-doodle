@@ -1,4 +1,3 @@
-wait(1)
 local function Create(Name, Properties, Children)
 	local Object = Instance.new(Name)
 	for i, v in next, Properties or {} do
@@ -40,12 +39,12 @@ function BuyLibrary:Init(parent)
 		Name = "BuyTab",
 		Parent = parent,
 	}, {
-		Create("UIPadding", {
-			PaddingBottom = UDim.new(0, 14),
-			PaddingLeft = UDim.new(0, 16),
-			PaddingRight = UDim.new(0, 16),
-			PaddingTop = UDim.new(0, 14),
-		}),
+		-- Create("UIPadding", {
+		-- 	PaddingBottom = UDim.new(0, 14),
+		-- 	PaddingLeft = UDim.new(0, 16),
+		-- 	PaddingRight = UDim.new(0, 16),
+		-- 	PaddingTop = UDim.new(0, 14),
+		-- }),
 		Create("UIListLayout", {
 			Padding = UDim.new(0, 18),
 			SortOrder = Enum.SortOrder.LayoutOrder,
@@ -81,7 +80,7 @@ function BuyLibrary:Init(parent)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		BackgroundColor3 = Color3.fromRGB(26, 26, 26),
 		BorderSizePixel = 0,
-		Size = UDim2.new(1, -60, 0, 32),
+		Size = UDim2.new(0, 200, 0, 32),
 		Name = "SearchInput",
 		Parent = ShopUI.Search.Main,
 	}, {
@@ -89,7 +88,10 @@ function BuyLibrary:Init(parent)
 			PaddingLeft = UDim.new(0, 12),
 			PaddingRight = UDim.new(0, 12),
 		}),
-		Create("UICorner", { CornerRadius = UDim.new(0, 5) })
+		Create("UICorner", { CornerRadius = UDim.new(0, 5) }),
+		Create("UIFlexItem", {
+			FlexMode = Enum.UIFlexMode.Fill,
+		})
 	})
 
 	-- Search button
@@ -133,6 +135,7 @@ function BuyLibrary:Init(parent)
 				BackgroundTransparency = 1,
 				Size = UDim2.new(1, 0, 0, 20),
 				Name = name .. "Label",
+				TextXAlignment = Enum.TextXAlignment.Left
 			})
 		})
 
@@ -156,6 +159,10 @@ function BuyLibrary:Init(parent)
 					BackgroundTransparency = 1,
 					Size = UDim2.new(0, 200, 1, 0),
 					Name = "NameLabel",
+				}, {
+					Create("UIFlexItem", {
+						FlexMode = Enum.UIFlexMode.Fill,
+					})
 				}),
 				Create("TextButton", {
 					Font = Enum.Font.Gotham,
