@@ -159,6 +159,7 @@ function BuyLibrary:Init(parent)
 					BackgroundTransparency = 1,
 					Size = UDim2.new(0, 200, 1, 0),
 					Name = "NameLabel",
+					TextXAlignment = Enum.TextXAlignment.Left
 				}, {
 					Create("UIFlexItem", {
 						FlexMode = Enum.UIFlexMode.Fill,
