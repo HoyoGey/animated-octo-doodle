@@ -78,7 +78,7 @@ function BuyLibrary:Init(parent)
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 13,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		BackgroundColor3 = Color3.fromRGB(26, 26, 26),
+		BackgroundColor3 = Color3.fromRGB(28, 28, 28),
 		BorderSizePixel = 0,
 		Size = UDim2.new(0, 200, 0, 32),
 		Name = "SearchInput",
