@@ -48,7 +48,7 @@ function BuyLibrary:Init(parent)
 		Create("UIListLayout", {
 			Padding = UDim.new(0, 18),
 			SortOrder = Enum.SortOrder.LayoutOrder,
-		})
+		}),
 	})
 
 	-- Search bar frame
@@ -66,7 +66,7 @@ function BuyLibrary:Init(parent)
 			Padding = UDim.new(0, 8),
 			FillDirection = Enum.FillDirection.Horizontal,
 			SortOrder = Enum.SortOrder.LayoutOrder,
-		})
+		}),
 	})
 
 	-- Search input box
@@ -91,7 +91,7 @@ function BuyLibrary:Init(parent)
 		Create("UICorner", { CornerRadius = UDim.new(0, 5) }),
 		Create("UIFlexItem", {
 			FlexMode = Enum.UIFlexMode.Fill,
-		})
+		}),
 	})
 
 	-- Search button
@@ -110,7 +110,7 @@ function BuyLibrary:Init(parent)
 			PaddingLeft = UDim.new(0, 12),
 			PaddingRight = UDim.new(0, 12),
 		}),
-		Create("UICorner", { CornerRadius = UDim.new(0, 5) })
+		Create("UICorner", { CornerRadius = UDim.new(0, 5) }),
 	})
 
 	-- Function to add sections
@@ -121,7 +121,7 @@ function BuyLibrary:Init(parent)
 			BackgroundTransparency = 1,
 			Size = UDim2.new(1, 0, 0, 0),
 			Name = name .. "Frame",
-			Parent = ShopUI.Main
+			Parent = ShopUI.Main,
 		}, {
 			Create("UIListLayout", {
 				Padding = UDim.new(0, 4),
@@ -135,8 +135,8 @@ function BuyLibrary:Init(parent)
 				BackgroundTransparency = 1,
 				Size = UDim2.new(1, 0, 0, 20),
 				Name = name .. "Label",
-				TextXAlignment = Enum.TextXAlignment.Left
-			})
+				TextXAlignment = Enum.TextXAlignment.Left,
+			}),
 		})
 
 		function section:AddCard(cardName, price)
@@ -159,11 +159,11 @@ function BuyLibrary:Init(parent)
 					BackgroundTransparency = 1,
 					Size = UDim2.new(0, 200, 1, 0),
 					Name = "NameLabel",
-					TextXAlignment = Enum.TextXAlignment.Left
+					TextXAlignment = Enum.TextXAlignment.Left,
 				}, {
 					Create("UIFlexItem", {
 						FlexMode = Enum.UIFlexMode.Fill,
-					})
+					}),
 				}),
 				Create("TextButton", {
 					Font = Enum.Font.Gotham,
@@ -174,8 +174,8 @@ function BuyLibrary:Init(parent)
 					Size = UDim2.new(0, 80, 0, 32),
 					Name = "BuyButton",
 				}, {
-					Create("UICorner", { CornerRadius = UDim.new(0, 5) })
-				})
+					Create("UICorner", { CornerRadius = UDim.new(0, 5) }),
+				}),
 			})
 		end
 
@@ -205,7 +205,6 @@ function BuyLibrary:Init(parent)
 	return ShopUI
 end
 
-
 -- local ScreenGui = Create("ScreenGui", {
 -- 	IgnoreGuiInset = false,
 -- 	ResetOnSpawn = false,
@@ -217,7 +216,6 @@ end
 -- section:AddCard("h", 1000)
 
 return BuyLibrary
-
 
 -- local info = Create("TextButton", {
 -- 	Font = Enum.Font.Gotham,
